@@ -23,17 +23,28 @@ public class Modulus_Clock
 			totalthree = total / 60;
 			futureHourtwo = futureHour + totalthree;
 
+			futureHourtwo = (futureHourtwo % 12);
+
 
 
             if (futureHour == 0){
                futureHour = 12;
 		   }
 
+
+
 		   System.out.print("Final time is ");
 		   System.out.print(futureHourtwo);
 		   System.out.print(":");
-		   System.out.print(totaltwo);
-		    System.out.print(" ");
+		   if (totaltwo < 10){
+		   	System.out.print("0" + totaltwo);
+		   }
+		   else
+		   {
+			    System.out.print(totaltwo);
+	   }
+
+		   System.out.print(" ");
 
 
 
